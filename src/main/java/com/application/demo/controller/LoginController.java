@@ -1,16 +1,21 @@
 package com.application.demo.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
-@RequestMapping(path= "/login")
+@Controller
 public class LoginController {
 
-	@GetMapping
+	@RequestMapping(path= "/login")
+	@ResponseBody
 	public String helloWorld() {
-		return "Hello to All";
+		return "Hello to Alls";
+	}
+	
+	@RequestMapping(path= "/login-jsp")
+	public String helloWorldJSP() {
+		return "Login";
 	}
 	
 }
